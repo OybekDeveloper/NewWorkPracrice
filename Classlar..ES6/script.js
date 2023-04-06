@@ -76,7 +76,6 @@ class square extends Component{
     {
         super(option.selector)
         this.$el.style.width=this.$el.style.height=option.size+'px'
-        this.$el.style.borderRadius=option.size/2+'%'
         this.$el.style.background=option.color
     }
 }
@@ -92,4 +91,27 @@ const square2= new square({
     selector:"#square2",
     size:100,
     color:'blue'
+})
+
+
+class Circle extends square{
+    constructor(option)
+    {   
+        super(option)
+        this.$el.style.borderRadius='50%'
+
+    }
+}
+
+//voris olaganda classning yuqoridagi xususiyatlarni o'zlashtiradi 
+const circle1 = new Circle({
+    selector:"#circle1",
+    size:100,
+    color:'black'
+})
+
+const circle2 = new Circle({
+    selector:"#circle2",
+    size:100,
+    color:'green'
 })
